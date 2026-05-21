@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بيت المقدس - القدس الشريف، أولى القبلتين، ثالث الحرمين الشريفين، مسرى النبي ﷺ">
+    <title>بيت المقدس - القدس الشريف | ديوان التاريخ الإسلامي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lateef:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/responsive.css">
+    <style>
+        .city-hero { background: linear-gradient(135deg, rgba(30,22,55,0.9), rgba(15,10,30,0.95)); border-radius: 48px; padding: 2rem; margin: 2rem 0; text-align: center; border: 1px solid var(--glass-border); }
+        .city-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .stat-box { background: rgba(0,0,0,0.4); border-radius: 28px; padding: 1rem; text-align: center; transition: all 0.3s; }
+        .stat-box:hover { border-color: var(--gold-primary); transform: translateY(-3px); }
+        .stat-number { font-size: 1.8rem; color: var(--gold-primary); font-weight: bold; }
+        .content-section { background: rgba(0,0,0,0.35); border-radius: 32px; padding: 1.8rem; margin: 1.5rem 0; border: 1px solid rgba(233,196,131,0.2); }
+        .content-section h2 { color: var(--gold-primary); border-right: 4px solid var(--gold-primary); padding-right: 1rem; margin-bottom: 1.5rem; }
+        .content-section h3 { color: var(--gold-light); margin: 1.2rem 0 0.8rem 0; border-right: 2px solid rgba(233,196,131,0.5); padding-right: 0.8rem; }
+        .quote-box { background: rgba(233,196,131,0.08); padding: 1.5rem; border-radius: 24px; margin: 1rem 0; text-align: center; font-size: 1.1rem; border-right: 3px solid var(--gold-primary); }
+        .detail-list { list-style: none; padding-right: 0; }
+        .detail-list li { margin: 0.6rem 0; padding-right: 1.2rem; position: relative; }
+        .detail-list li:before { content: "●"; color: var(--gold-primary); position: absolute; right: 0; }
+        .timeline-item { display: flex; align-items: baseline; gap: 1rem; padding: 0.8rem; border-right: 3px solid var(--gold-primary); background: rgba(0,0,0,0.2); border-radius: 16px; margin: 0.8rem 0; }
+        .timeline-year { font-weight: bold; color: var(--gold-primary); min-width: 100px; }
+        .place-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .place-card { background: rgba(0,0,0,0.3); border-radius: 20px; padding: 1rem; transition: all 0.3s; }
+        .place-card:hover { background: rgba(233,196,131,0.08); transform: translateY(-3px); }
+        .related-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+        .related-links a { background: rgba(0,0,0,0.5); padding: 0.6rem 1.2rem; border-radius: 40px; text-decoration: none; color: var(--text-muted); font-size: 0.85rem; transition: all 0.2s; }
+        .related-links a:hover { background: var(--gold-primary); color: var(--dark-bg); }
+    </style>
+
+    <script src="../../../assets/js/security.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div class="container">
+    <a href="../../../index.html" class="back-button"><i class="fas fa-arrow-right"></i> العودة إلى الرئيسية</a>
+    
+    <div class="city-hero">
+        <i class="fas fa-place-of-worship" style="font-size: 3.5rem; color: var(--gold-primary);"></i>
+        <h1>بيت المقدس</h1>
+        <p style="font-size: 1.1rem;">القدس الشريف · أولى القبلتين · ثالث الحرمين الشريفين · مسرى النبي ﷺ</p>
+    </div>
+    
+    <div class="city-stats">
+        <div class="stat-box"><div class="stat-number">1</div><div>أولى القبلتين</div></div>
+        <div class="stat-box"><div class="stat-number">3</div><div>ثالث الحرمين</div></div>
+        <div class="stat-box"><div class="stat-number">621 م</div><div>الإسراء والمعراج</div></div>
+        <div class="stat-box"><div class="stat-number">638 م</div><div>فتح عمر بن الخطاب</div></div>
+        <div class="stat-box"><div class="stat-number">1187 م</div><div>تحرير صلاح الدين</div></div>
+    </div>
+    
+    <!-- مكانة القدس في الإسلام -->
+    <div class="content-section">
+        <h2><i class="fas fa-star-of-life"></i> أولاً: مكانة القدس في الإسلام</h2>
+        <ul class="detail-list">
+            <li><strong>أولى القبلتين:</strong> كانت قبلة المسلمين قبل تحويلها إلى الكعبة</li>
+            <li><strong>ثالث الحرمين الشريفين:</strong> بعد مكة والمدينة</li>
+            <li><strong>المسرى:</strong> قال تعالى: "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى"</li>
+            <li><strong>المعراج:</strong> عرج النبي ﷺ من القدس إلى السماوات العلى</li>
+        </ul>
+        <div class="quote-box">
+            <i class="fas fa-quote-right"></i>
+            <p>"لا تشد الرحال إلا إلى ثلاثة مساجد: المسجد الحرام، ومسجدي هذا، والمسجد الأقصى"</p>
+            <p>— النبي محمد ﷺ —</p>
+        </div>
+    </div>
+    
+    <!-- فتح القدس في عهد عمر -->
+    <div class="content-section">
+        <h2><i class="fas fa-flag-checkered"></i> ثانياً: فتح القدس في عهد عمر بن الخطاب (15 هـ / 638 م)</h2>
+        <ul class="detail-list">
+            <li><strong>القائد:</strong> أبو عبيدة بن الجراح</li>
+            <li><strong>التسليم:</strong> تسلم عمر بن الخطاب مفاتيح المدينة بنفسه</li>
+            <li><strong>العهدة العمرية:</strong> وثيقة الأمان لأهل القدس</li>
+            <li><strong>النتيجة:</strong> دخلت القدس في حوزة المسلمين</li>
+        </ul>
+    </div>
+    
+    <!-- المسجد الأقصى -->
+    <div class="content-section">
+        <h2><i class="fas fa-mosque"></i> ثالثاً: المسجد الأقصى المبارك</h2>
+        <ul class="detail-list">
+            <li><strong>المساحة:</strong> 144 دونماً</li>
+            <li><strong>المصلى القبلي:</strong> المسجد ذو القبة الرصاصية</li>
+            <li><strong>قبة الصخرة:</strong> بناها عبدالملك بن مروان (72 هـ / 691 م)</li>
+            <li><strong>مكانة المسجد:</strong> أولى القبلتين وثالث الحرمين</li>
+        </ul>
+    </div>
+    
+    <!-- تحرير القدس -->
+    <div class="content-section">
+        <h2><i class="fas fa-fist-raised"></i> رابعاً: تحرير القدس على يد صلاح الدين الأيوبي (583 هـ / 1187 م)</h2>
+        <ul class="detail-list">
+            <li><strong>الاحتلال الصليبي:</strong> 492-583 هـ (1099-1187 م) 88 عاماً</li>
+            <li><strong>معركة حطين:</strong> 583 هـ / 1187 م، النصر العظيم</li>
+            <li><strong>تحرير القدس:</strong> 27 رجب 583 هـ / 2 أكتوبر 1187 م</li>
+            <li><strong>الأمان لأهلها:</strong> أطلق صلاح الدين سراح الفقراء دون فدية</li>
+            <li><strong>تطهير المسجد الأقصى:</strong> أعيدت الخطبة فيه بعد 88 عاماً</li>
+        </ul>
+        <div class="quote-box">
+            <i class="fas fa-quote-right"></i>
+            <p>"هذا يوم أخرجه الله للمسلمين بعد أن كان في أيدي الصليبيين 88 عاماً"</p>
+            <p>— صلاح الدين الأيوبي —</p>
+        </div>
+    </div>
+    
+    <!-- معالم القدس -->
+    <div class="content-section">
+        <h2><i class="fas fa-landmark"></i> خامساً: معالم القدس الإسلامية</h2>
+        <div class="place-grid">
+            <div class="place-card">
+                <h3>المسجد الأقصى</h3>
+                <p>أولى القبلتين وثالث الحرمين</p>
+            </div>
+            <div class="place-card">
+                <h3>قبة الصخرة</h3>
+                <p>بناها عبدالملك بن مروان، مكان المعراج</p>
+            </div>
+            <div class="place-card">
+                <h3>المصلى القبلي</h3>
+                <p>الجامع الأقصى ذو القبة الرصاصية</p>
+            </div>
+            <div class="place-card">
+                <h3>باب العامود</h3>
+                <p>أحد أبواب القدس التاريخية</p>
+            </div>
+            <div class="place-card">
+                <h3>باب الرحمة</h3>
+                <p>أحد أبواب المسجد الأقصى</p>
+            </div>
+            <div class="place-card">
+                <h3>سوق القطانين</h3>
+                <p>سوق أثري في القدس</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- القدس في العصر الحديث -->
+    <div class="content-section">
+        <h2><i class="fas fa-chart-line"></i> سادساً: القدس في العصر الحديث</h2>
+        <ul class="detail-list">
+            <li><strong>الانتداب البريطاني:</strong> 1917-1948 م</li>
+            <li><strong>احتلال 1948:</strong> احتلال القدس الغربية، بقاء الشرقية أردنية</li>
+            <li><strong>احتلال 1967:</strong> احتلال القدس الشرقية في نكسة حزيران</li>
+            <li><strong>تهويد القدس:</strong> محاولات إسرائيلية مستمرة لتهويد المدينة</li>
+            <li><strong>المقاومة:</strong> صمود المقدسيين في وجه الاحتلال</li>
+        </ul>
+    </div>
+    
+    <!-- التسلسل الزمني -->
+    <div class="content-section">
+        <h2><i class="fas fa-timeline"></i> سابعاً: التسلسل الزمني لتاريخ القدس</h2>
+        <div class="timeline-item"><div class="timeline-year">621 م</div><div>الإسراء والمعراج</div></div>
+        <div class="timeline-item"><div class="timeline-year">638 م (15 هـ)</div><div>فتح القدس على يد عمر بن الخطاب</div></div>
+        <div class="timeline-item"><div class="timeline-year">691 م (72 هـ)</div><div>بناء قبة الصخرة</div></div>
+        <div class="timeline-item"><div class="timeline-year">1099 م (492 هـ)</div><div>احتلال الصليبيين للقدس</div></div>
+        <div class="timeline-item"><div class="timeline-year">1187 م (583 هـ)</div><div>تحرير القدس على يد صلاح الدين</div></div>
+        <div class="timeline-item"><div class="timeline-year">1517 م</div><div>دخول العثمانيين</div></div>
+        <div class="timeline-item"><div class="timeline-year">1917 م</div><div>الانتداب البريطاني</div></div>
+        <div class="timeline-item"><div class="timeline-year">1948 م</div><div>احتلال القدس الغربية</div></div>
+        <div class="timeline-item"><div class="timeline-year">1967 م</div><div>احتلال القدس الشرقية</div></div>
+    </div>
+    
+    <!-- مواضيع ذات صلة -->
+    <div class="content-section">
+        <h2><i class="fas fa-link"></i> مواضيع ذات صلة</h2>
+        <div class="related-links">
+            <a href="makkah.html">مكة المكرمة</a>
+            <a href="madinah.html">المدينة المنورة</a>
+            <a href="../../pages/figures/leaders/saladin-al-ayyubi.html">صلاح الدين الأيوبي</a>
+            <a href="../../pages/battles/crusades-battles/battle-of-hittin.html">معركة حطين</a>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script src="../../../assets/js/main.js"></script>
+
+</body>
+</html>

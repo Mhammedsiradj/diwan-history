@@ -1,0 +1,136 @@
+<!-- Header Section -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.svg" alt="ديوان التاريخ الإسلامي" width="50">
+                <span>ديوان التاريخ الإسلامي</span>
+            </a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="pages/eras/" class="nav-link"><i class="fas fa-hourglass-half"></i> العصور</a></li>
+                <li><a href="pages/figures/" class="nav-link"><i class="fas fa-users"></i> الشخصيات</a></li>
+                <li><a href="pages/battles/" class="nav-link"><i class="fas fa-fist-raised"></i> المعارك</a></li>
+                <li><a href="pages/civilizations/" class="nav-link"><i class="fas fa-university"></i> الحضارة</a></li>
+                <li><a href="pages/references/" class="nav-link"><i class="fas fa-book"></i> المصادر</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <button class="menu-toggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+    .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(3, 1, 10, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 0.8rem 0;
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        text-decoration: none;
+        color: var(--gold-primary);
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: 'Amiri', serif;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+    }
+    
+    .main-nav a {
+        text-decoration: none;
+        color: var(--text-muted);
+        font-family: 'Reem Kufi', sans-serif;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+        color: var(--gold-primary);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--gold-primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+        .main-nav {
+            display: none;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .main-nav.open {
+            display: block;
+        }
+        
+        .main-nav ul {
+            flex-direction: column;
+            gap: 0.8rem;
+            padding: 1rem 0;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        .header-container {
+            padding: 0 1rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('open');
+            });
+        }
+    });
+</script>

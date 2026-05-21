@@ -1,0 +1,105 @@
+/* ==================== READING MODE STYLES ==================== */
+:root {
+    --reading-font-size: 1.1rem;
+    --reading-bg: #1a142f;
+    --reading-text: #e0e0e0;
+}
+
+.reading-settings-panel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(30, 22, 55, 0.95);
+    border: 1px solid var(--gold-primary);
+    border-radius: 20px;
+    padding: 15px;
+    z-index: 10000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+    animation: slideUp 0.3s ease-out;
+}
+
+.reading-settings-panel.active {
+    display: flex;
+}
+
+.reading-fab {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--gold-primary);
+    color: var(--dark-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10001;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.reading-fab:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.setting-label {
+    font-size: 0.8rem;
+    color: var(--gold-primary);
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.setting-options {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.setting-btn {
+    flex: 1;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(233,196,131,0.3);
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.setting-btn:hover, .setting-btn.active {
+    border-color: var(--gold-primary);
+    background: rgba(233,196,131,0.1);
+}
+
+.sepia-mode {
+    background-color: #f4ecd8 !important;
+    color: #433422 !important;
+}
+
+.sepia-mode .content-section, .sepia-mode .hero {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-color: #d3bc8d !important;
+    color: #433422 !important;
+}
+
+.sepia-mode h1, .sepia-mode h2, .sepia-mode h3 {
+    color: #5d4037 !important;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

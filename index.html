@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="description" content="ديوان التاريخ الإسلامي - الموسوعة الشاملة لتاريخ العرب والمسلمين من أول ظهور للعرب حتى العصر الحديث">
+    <meta name="keywords" content="التاريخ الإسلامي, تاريخ العرب, السيرة النبوية, الخلفاء الراشدين, الدولة العباسية, الدولة العثمانية">
+    <meta name="author" content="ديوان التاريخ الإسلامي">
+    <title>ديوان التاريخ الإسلامي - الموسوعة الشاملة</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Security & Core JS -->
+    <script src="assets/js/security.js"></script>
+    <style>
+        .hist-card, .figure-card, .timeline-event, .index-item li, .epoch-pill {
+            cursor: pointer !important;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Include Header -->
+<div id="header"></div>
+
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="bismillah">﷽</div>
+        <h1>ديوان التاريخ الإسلامي</h1>
+        <div class="hero-sub">
+            الموسوعة الشاملة لتاريخ العرب والمسلمين<br>
+            من أقدم العصور العربية حتى حاضر الأمة — للمطالعة والاستكشاف الحر
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="explore-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 ابحث عن شخصية، حدث، عصر، أو معركة...">
+            <div class="filter-buttons">
+                <div class="filter-btn active" data-filter="all">الكل</div>
+                <div class="filter-btn" data-filter="preislam">ما قبل الإسلام</div>
+                <div class="filter-btn" data-filter="prophetic">النبوي والراشدون</div>
+                <div class="filter-btn" data-filter="umayyad">الأموي والعباسي</div>
+                <div class="filter-btn" data-filter="modern">العصر الحديث</div>
+            </div>
+        </div>
+        
+        <!-- Epoch Pills -->
+        <div class="timeline-epochs">
+    <a href="pages/eras/pre-islamic-era.html" class="epoch-pill"><i class="fas fa-meteor"></i> فجر العرب (3000 ق.م - 571 م)</a>
+    <a href="pages/eras/prophetic-era.html" class="epoch-pill"><i class="fas fa-mosque"></i> عصر النبوة &amp; الراشدون</a>
+    <a href="pages/eras/umayyad-era.html" class="epoch-pill"><i class="fas fa-landmark"></i> الأمويون · العباسيون</a>
+    <a href="pages/eras/ayyubid-era.html" class="epoch-pill"><i class="fas fa-fort-awesome"></i> الأيوبيون · المماليك · العثمانيون</a>
+    <a href="pages/eras/modern-era.html" class="epoch-pill"><i class="fas fa-chart-line"></i> العصر الحديث &amp; النهضة</a>
+</div>
+</div>
+
+
+    <!-- Main Historical Grid - 5 بطاقات -->
+    <div class="history-master-grid">
+        <div class="hist-card" data-filter="preislam" onclick="window.location='pages/eras/pre-islamic-era.html'">
+            <div class="card-header"><div class="card-icon"><i class="fas fa-archaeology"></i></div><h3>فجر العرب · العصور القديمة</h3></div>
+            <div><strong>أبرز الشخصيات:</strong></div>
+            <div class="persons-list"><span>سبأ</span><span>معين</span><span>الأنباط</span><span>المناذرة</span></div>
+            <div><strong>أهم الأحداث:</strong></div>
+            <div class="events-list"><span>سد مأرب</span><span>حرب البسوس</span><span>عام الفيل</span></div>
+        </div>
+        <div class="hist-card" data-filter="prophetic" onclick="window.location='pages/eras/prophetic-era.html'">
+            <div class="card-header"><div class="card-icon"><i class="fas fa-star-and-crescent"></i></div><h3>عصر النبوة · الخلافة الراشدة</h3></div>
+            <div><strong>أبرز الشخصيات:</strong></div>
+            <div class="persons-list"><span>محمد ﷺ</span><span>أبو بكر</span><span>عمر</span><span>عثمان</span><span>علي</span></div>
+            <div><strong>أهم الأحداث:</strong></div>
+            <div class="events-list"><span>بدر</span><span>أحد</span><span>الخندق</span><span>فتح مكة</span></div>
+        </div>
+        <div class="hist-card" data-filter="umayyad" onclick="window.location='pages/eras/umayyad-era.html'">
+            <div class="card-header"><div class="card-icon"><i class="fas fa-university"></i></div><h3>الأمويون · العباسيون</h3></div>
+            <div><strong>أبرز الشخصيات:</strong></div>
+            <div class="persons-list"><span>معاوية</span><span>هارون الرشيد</span><span>ابن سينا</span></div>
+            <div><strong>أهم الأحداث:</strong></div>
+            <div class="events-list"><span>فتح الأندلس</span><span>بيت الحكمة</span></div>
+        </div>
+        <div class="hist-card" data-filter="ayyubid" onclick="window.location='pages/eras/ayyubid-era.html'">
+            <div class="card-header"><div class="card-icon"><i class="fas fa-fort-awesome"></i></div><h3>الأيوبيون · المماليك · العثمانيون</h3></div>
+            <div><strong>أبرز الشخصيات:</strong></div>
+            <div class="persons-list"><span>صلاح الدين</span><span>بيبرس</span><span>محمد الفاتح</span></div>
+            <div><strong>أهم الأحداث:</strong></div>
+            <div class="events-list"><span>حطين</span><span>عين جالوت</span><span>فتح القسطنطينية</span></div>
+        </div>
+        <div class="hist-card" data-filter="modern" onclick="window.location='pages/eras/modern-era.html'">
+            <div class="card-header"><div class="card-icon"><i class="fas fa-globe-asia"></i></div><h3>العصر الحديث · النهضة</h3></div>
+            <div><strong>أبرز الشخصيات:</strong></div>
+            <div class="persons-list"><span>الأفغاني</span><span>محمد عبده</span><span>أحمد زويل</span></div>
+            <div><strong>أهم الأحداث:</strong></div>
+            <div class="events-list"><span>النهضة</span><span>أكتوبر</span><span>رؤى المستقبل</span></div>
+        </div>
+    </div>
+
+
+    <!-- Full Timeline Section -->
+    <div class="full-timeline">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;"><i class="fas fa-timeline"></i> التسلسل الزمني الشامل للأحداث</h2>
+        <div class="timeline-grid">
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-3000bc.html'"><div class="event-year">📅 3000 ق.م</div><div>ممالك سبأ ومعين، سد مأرب</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1500bc.html'"><div class="event-year">📅 1500 ق.م</div><div>مملكة سبأ، طريق البخور</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-571.html'"><div class="event-year">📅 571 م</div><div>عام الفيل ومولد النبي ﷺ</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-610.html'"><div class="event-year">📅 610 م</div><div>بداية الوحي ونزول القرآن</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-622.html'"><div class="event-year">📅 622 م</div><div>الهجرة النبوية</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-632.html'"><div class="event-year">📅 632 م</div><div>وفاة النبي ﷺ</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-636.html'"><div class="event-year">📅 636 م</div><div>معركة اليرموك وفتح الشام</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-637.html'"><div class="event-year">📅 637 م</div><div>فتح المدائن (عاصمة الفرس)</div></div>
+
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-711.html'"><div class="event-year">📅 711 م</div><div>فتح الأندلس</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1187.html'"><div class="event-year">📅 1187 م</div><div>معركة حطين وتحرير القدس</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1260.html'"><div class="event-year">📅 1260 م</div><div>معركة عين جالوت</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1453.html'"><div class="event-year">📅 1453 م</div><div>فتح القسطنطينية</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1924.html'"><div class="event-year">📅 1924 م</div><div>إلغاء الخلافة العثمانية</div></div>
+            <div class="timeline-event" onclick="window.location='pages/timeline/timeline-year-1973.html'"><div class="event-year">📅 1973 م</div><div>حرب أكتوبر</div></div>
+        </div>
+    </div>
+
+    <!-- Figures Gallery -->
+    <h2 style="text-align: center; margin: 2rem 0 1rem;"><i class="fas fa-users"></i> أعلام الإسلام عبر العصور</h2>
+    <div class="figures-gallery">
+        <div class="figure-card" onclick="window.location='pages/figures/prophets/prophet-muhammad.html'"><i class="fas fa-mosque"></i><h3>محمد ﷺ</h3><p>خاتم الأنبياء</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/caliphs/abu-bakr.html'"><i class="fas fa-crown"></i><h3>أبو بكر الصديق</h3><p>أول الخلفاء</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/caliphs/umar-ibn-khattab.html'"><i class="fas fa-gavel"></i><h3>عمر بن الخطاب</h3><p>الفاروق</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/caliphs/uthman-bin-affan.html'"><i class="fas fa-book-quran"></i><h3>عثمان بن عفان</h3><p>ذو النورين</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/caliphs/ali-bin-abi-talib.html'"><i class="fas fa-hand-fist"></i><h3>علي بن أبي طالب</h3><p>باب مدينة العلم</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/caliphs/umar-bin-abdulaziz.html'"><i class="fas fa-crown"></i><h3>عمر بن عبدالعزيز</h3><p>خامس الخلفاء</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/leaders/saladin-al-ayyubi.html'"><i class="fas fa-horse"></i><h3>صلاح الدين الأيوبي</h3><p>محرر القدس</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/leaders/mehmed-conqueror.html'"><i class="fas fa-fort"></i><h3>محمد الفاتح</h3><p>فاتح القسطنطينية</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/companions/khalid-bin-waleed.html'"><i class="fas fa-sword"></i><h3>خالد بن الوليد</h3><p>سيف الله المسلول</p></div>
+        <div class="figure-card" onclick="window.location='pages/figures/scholars/ibn-sina.html'"><i class="fas fa-brain"></i><h3>ابن سينا</h3><p>الشيخ الرئيس</p></div>
+    </div>
+
+    <!-- INDEX SECTION - شامل 12 قسماً (أكثر من 150 رابط) -->
+    <div class="index-section">
+        <div style="text-align: center;"><div class="index-title"><i class="fas fa-list-ul"></i> فهرس المحتويات الشامل</div></div>
+        <div class="index-grid">
+            
+            <!-- 1. العصور التاريخية -->
+            <div class="index-item">
+                <h4><i class="fas fa-hourglass-half"></i> العصور التاريخية</h4>
+                <ul>
+                    <li onclick="window.location='pages/eras/pre-islamic-era.html'">• فجر العرب (3000 ق.م - 571 م)</li>
+                    <li onclick="window.location='pages/eras/prophetic-era.html'">• عصر النبوة (571-632 م)</li>
+                    <li onclick="window.location='pages/eras/rashidun-era.html'">• الخلافة الراشدة (632-661 م)</li>
+                    <li onclick="window.location='pages/eras/umayyad-era.html'">• الدولة الأموية (661-750 م)</li>
+                    <li onclick="window.location='pages/eras/abbasid-era.html'">• الدولة العباسية (750-1258 م)</li>
+                    <li onclick="window.location='pages/eras/ayyubid-era.html'">• الدولة الأيوبية (1171-1250 م)</li>
+                    <li onclick="window.location='pages/eras/ayyubid-era.html'">• الدولة المملوكية (1250-1517 م)</li>
+                    <li onclick="window.location='pages/eras/ottoman-era.html'">• الدولة العثمانية (1299-1924 م)</li>
+                    <li onclick="window.location='pages/eras/modern-era.html'">• العصر الحديث (1924-حتى اليوم)</li>
+                </ul>
+            </div>
+            
+            <!-- 2. الخلفاء الراشدون -->
+            <div class="index-item">
+                <h4><i class="fas fa-crown"></i> الخلفاء الراشدون</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/caliphs/abu-bakr.html'">• أبو بكر الصديق</li>
+                    <li onclick="window.location='pages/figures/caliphs/umar-ibn-khattab.html'">• عمر بن الخطاب</li>
+                    <li onclick="window.location='pages/figures/caliphs/uthman-bin-affan.html'">• عثمان بن عفان</li>
+                    <li onclick="window.location='pages/figures/caliphs/ali-bin-abi-talib.html'">• علي بن أبي طالب</li>
+                    <li onclick="window.location='pages/figures/caliphs/umar-bin-abdulaziz.html'">• عمر بن عبدالعزيز</li>
+                </ul>
+            </div>
+            
+            <!-- 3. القادة والملوك -->
+            <div class="index-item">
+                <h4><i class="fas fa-flag-checkered"></i> القادة والملوك</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/leaders/saladin-al-ayyubi.html'">• صلاح الدين الأيوبي</li>
+                    <li onclick="window.location='pages/figures/leaders/mehmed-conqueror.html'">• محمد الفاتح</li>
+                    <li onclick="window.location='pages/figures/leaders/baibars.html'">• الظاهر بيبرس</li>
+                    <li onclick="window.location='pages/figures/leaders/abdul-rahman-al-dakhil.html'">• عبدالرحمن الداخل</li>
+                    <li onclick="window.location='pages/figures/leaders/tariq-bin-ziyad.html'">• طارق بن زياد</li>
+                    <li onclick="window.location='pages/figures/leaders/mohammad-bin-qasim.html'">• محمد بن القاسم</li>
+                    <li onclick="window.location='pages/figures/leaders/selim-i.html'">• سليم الأول</li>
+                    <li onclick="window.location='pages/figures/leaders/suleiman-magnificent.html'">• سليمان القانوني</li>
+                    <li onclick="window.location='pages/figures/leaders/abdulaziz-alsaud.html'">• الملك عبدالعزيز</li>
+                    <li onclick="window.location='pages/figures/leaders/nasser.html'">• جمال عبدالناصر</li>
+                    <li onclick="window.location='pages/figures/leaders/musa-bin-nusayr.html'">• موسى بن نصير</li>
+                    <li onclick="window.location='pages/figures/leaders/abdul-malik-bin-marwan.html'">• عبدالملك بن مروان</li>
+                </ul>
+            </div>
+            
+            <!-- 4. الصحابة الكرام -->
+            <div class="index-item">
+                <h4><i class="fas fa-users"></i> الصحابة الكرام</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/companions/khalid-bin-waleed.html'">• خالد بن الوليد</li>
+                    <li onclick="window.location='pages/figures/companions/saad-bin-abi-waqqas.html'">• سعد بن أبي وقاص</li>
+                    <li onclick="window.location='pages/figures/companions/abu-ubaydah.html'">• أبو عبيدة بن الجراح</li>
+                    <li onclick="window.location='pages/figures/companions/zubair-bin-awwam.html'">• الزبير بن العوام</li>
+                    <li onclick="window.location='pages/figures/companions/talha-bin-ubaydullah.html'">• طلحة بن عبيدالله</li>
+                    <li onclick="window.location='pages/figures/companions/abdur-rahman-bin-auf.html'">• عبدالرحمن بن عوف</li>
+                    <li onclick="window.location='pages/figures/companions/salman-al-farsi.html'">• سلمان الفارسي</li>
+                    <li onclick="window.location='pages/figures/companions/bilal-bin-rabah.html'">• بلال بن رباح</li>
+                    <li onclick="window.location='pages/figures/companions/hamza-bin-abdul-muttalib.html'">• حمزة بن عبدالمطلب</li>
+                    <li onclick="window.location='pages/figures/companions/saad-bin-muadh.html'">• سعد بن معاذ</li>
+                    <li onclick="window.location='pages/figures/companions/abu-dhar-al-ghifari.html'">• أبو ذر الغفاري</li>
+                    <li onclick="window.location='pages/figures/companions/amr-bin-al-as.html'">• عمرو بن العاص</li>
+                    <li onclick="window.location='pages/figures/companions/jaafar-bin-abi-talib.html'">• جعفر بن أبي طالب</li>
+                    <li onclick="window.location='pages/figures/companions/abdullah-bin-rawahah.html'">• عبدالله بن رواحة</li>
+                    <li onclick="window.location='pages/figures/companions/zaid-bin-haritha.html'">• زيد بن حارثة</li>
+                    <li onclick="window.location='pages/figures/companions/muadh-bin-jabal.html'">• معاذ بن جبل</li>
+                </ul>
+            </div>
+            
+            <!-- 5. العلماء والمفكرون -->
+            <div class="index-item">
+                <h4><i class="fas fa-flask"></i> العلماء والمفكرون</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/scholars/ibn-sina.html'">• ابن سينا</li>
+                    <li onclick="window.location='pages/figures/scholars/al-khwarizmi.html'">• الخوارزمي</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-khaldun.html'">• ابن خلدون</li>
+                    <li onclick="window.location='pages/figures/scholars/al-bukhari.html'">• الإمام البخاري</li>
+                    <li onclick="window.location='pages/figures/scholars/muslim.html'">• الإمام مسلم</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-kathir.html'">• ابن كثير</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-taymiyyah.html'">• ابن تيمية</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-al-qayyim.html'">• ابن القيم</li>
+                    <li onclick="window.location='pages/figures/scholars/al-nawawi.html'">• الإمام النووي</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-rushd.html'">• ابن رشد</li>
+                    <li onclick="window.location='pages/figures/scholars/al-ghazali.html'">• الغزالي</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-hajar.html'">• ابن حجر العسقلاني</li>
+                    <li onclick="window.location='pages/figures/scholars/al-zahrawi.html'">• الزهراوي</li>
+                    <li onclick="window.location='pages/figures/scholars/al-farabi.html'">• الفارابي</li>
+                    <li onclick="window.location='pages/figures/scholars/al-biruni.html'">• البيروني</li>
+                    <li onclick="window.location='pages/figures/scholars/al-razi.html'">• الرازي</li>
+                    <li onclick="window.location='pages/figures/scholars/ibn-al-haytham.html'">• ابن الهيثم</li>
+                    <li onclick="window.location='pages/figures/scholars/abu-hanifa.html'">• أبو حنيفة</li>
+                    <li onclick="window.location='pages/figures/scholars/malik-bin-anas.html'">• مالك بن أنس</li>
+                    <li onclick="window.location='pages/figures/scholars/al-shafii.html'">• الإمام الشافعي</li>
+                    <li onclick="window.location='pages/figures/scholars/ahmad-bin-hanbal.html'">• أحمد بن حنبل</li>
+                    <li onclick="window.location='pages/figures/scholars/jamal-din-afghani.html'">• جمال الدين الأفغاني</li>
+                    <li onclick="window.location='pages/figures/scholars/mohammad-abduh.html'">• محمد عبده</li>
+                    <li onclick="window.location='pages/figures/scholars/ahmed-zewail.html'">• أحمد زويل</li>
+                </ul>
+            </div>
+            
+            <!-- 6. الشعراء -->
+            <div class="index-item">
+                <h4><i class="fas fa-feather-alt"></i> الشعراء</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/poets/imru-al-qays.html'">• امرؤ القيس</li>
+                    <li onclick="window.location='pages/figures/poets/zuhair-bin-abi-sulma.html'">• زهير بن أبي سلمى</li>
+                    <li onclick="window.location='pages/figures/poets/antarah-bin-shaddad.html'">• عنترة بن شداد</li>
+                    <li onclick="window.location='pages/figures/poets/tarafa-bin-al-abd.html'">• طرفة بن العبد</li>
+                    <li onclick="window.location='pages/figures/poets/labid-bin-rabia.html'">• لبيد بن ربيعة</li>
+                    <li onclick="window.location='pages/figures/poets/amr-bin-kulthum.html'">• عمرو بن كلثوم</li>
+                    <li onclick="window.location='pages/figures/poets/al-nabigha.html'">• النابغة الذبياني</li>
+                    <li onclick="window.location='pages/figures/poets/kaab-bin-zuhair.html'">• كعب بن زهير</li>
+                    <li onclick="window.location='pages/figures/poets/al-mutanabbi.html'">• المتنبي</li>
+                    <li onclick="window.location='pages/figures/poets/abu-nuwas.html'">• أبو نواس</li>
+                </ul>
+            </div>
+            
+            <!-- 7. الأنبياء -->
+            <div class="index-item">
+                <h4><i class="fas fa-star-of-life"></i> الأنبياء</h4>
+                <ul>
+                    <li onclick="window.location='pages/figures/prophets/prophet-muhammad.html'">• النبي محمد ﷺ</li>
+                    <li onclick="window.location='pages/figures/prophets/prophet-ishmael.html'">• إسماعيل عليه السلام</li>
+                    <li onclick="window.location='pages/figures/prophets/prophet-ibrahim.html'">• إبراهيم الخليل عليه السلام</li>
+                </ul>
+            </div>
+            
+            <!-- 8. المعارك والفتوحات -->
+            <div class="index-item">
+                <h4><i class="fas fa-fist-raised"></i> المعارك والفتوحات</h4>
+                <ul>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-badr.html'">• غزوة بدر الكبرى</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-uhud.html'">• غزوة أحد</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-trench.html'">• غزوة الخندق</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/conquest-of-makkah.html'">• فتح مكة</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-hunayn.html'">• غزوة حنين</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-tabuk.html'">• غزوة تبوك</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-khaibar.html'">• غزوة خيبر</li>
+                    <li onclick="window.location='pages/battles/prophetic-battles/battle-of-mutah.html'">• غزوة مؤتة</li>
+                    <li onclick="window.location='pages/battles/conquests/battle-of-yarmouk.html'">• معركة اليرموك</li>
+                    <li onclick="window.location='pages/battles/conquests/battle-of-qadisiyyah.html'">• معركة القادسية</li>
+                    <li onclick="window.location='pages/battles/conquests/conquest-of-andalus.html'">• فتح الأندلس</li>
+                    <li onclick="window.location='pages/battles/conquests/conquest-of-sindh.html'">• فتح السند</li>
+                    <li onclick="window.location='pages/battles/conquests/battle-of-nahavand.html'">• معركة نهاوند</li>
+                    <li onclick="window.location='pages/battles/crusades-battles/battle-of-hittin.html'">• معركة حطين</li>
+                    <li onclick="window.location='pages/battles/mongol-battles/battle-of-ain-jalut.html'">• معركة عين جالوت</li>
+                    <li onclick="window.location='pages/battles/ottoman-battles/conquest-of-constantinople.html'">• فتح القسطنطينية</li>
+                    <li onclick="window.location='pages/battles/ottoman-battles/battle-of-marj-dabiq.html'">• معركة مرج دابق</li>
+                    <li onclick="window.location='pages/battles/ottoman-battles/battle-of-ridaniya.html'">• معركة الريدانية</li>
+                    <li onclick="window.location='pages/battles/ottoman-battles/battle-of-mohacs.html'">• معركة موهاج</li>
+                </ul>
+            </div>
+            
+            <!-- 9. المدن الإسلامية -->
+            <div class="index-item">
+                <h4><i class="fas fa-city"></i> المدن الإسلامية</h4>
+                <ul>
+                    <li onclick="window.location='pages/civilizations/cities/makkah.html'">• مكة المكرمة</li>
+                    <li onclick="window.location='pages/civilizations/cities/madinah.html'">• المدينة المنورة</li>
+                    <li onclick="window.location='pages/civilizations/cities/baghdad.html'">• بغداد</li>
+                    <li onclick="window.location='pages/civilizations/cities/cairo.html'">• القاهرة</li>
+                    <li onclick="window.location='pages/civilizations/cities/damascus.html'">• دمشق</li>
+                    <li onclick="window.location='pages/civilizations/cities/jerusalem.html'">• بيت المقدس</li>
+                    <li onclick="window.location='pages/civilizations/cities/cordoba.html'">• قرطبة</li>
+                    <li onclick="window.location='pages/civilizations/cities/istanbul.html'">• إسطنبول</li>
+                </ul>
+            </div>
+            
+            <!-- 10. المؤسسات العلمية -->
+            <div class="index-item">
+                <h4><i class="fas fa-university"></i> المؤسسات العلمية</h4>
+                <ul>
+                    <li onclick="window.location='pages/civilizations/institutions/house-of-wisdom.html'">• بيت الحكمة</li>
+                    <li onclick="window.location='pages/civilizations/institutions/al-azhar.html'">• الجامع الأزهر</li>
+                    <li onclick="window.location='pages/civilizations/institutions/nizamiyya.html'">• المدرسة النظامية</li>
+                    <li onclick="window.location='pages/civilizations/institutions/madrasa-al-mustansiriya.html'">• المدرسة المستنصرية</li>
+                    <li onclick="window.location='pages/civilizations/institutions/maristan.html'">• البيمارستانات</li>
+                </ul>
+            </div>
+            
+            <!-- 11. العلوم والفنون -->
+            <div class="index-item">
+                <h4><i class="fas fa-microscope"></i> العلوم والفنون</h4>
+                <ul>
+                    <li onclick="window.location='pages/civilizations/sciences/medicine.html'">• الطب الإسلامي</li>
+                    <li onclick="window.location='pages/civilizations/sciences/mathematics.html'">• الرياضيات</li>
+                    <li onclick="window.location='pages/civilizations/sciences/astronomy.html'">• الفلك</li>
+                    <li onclick="window.location='pages/civilizations/sciences/chemistry.html'">• الكيمياء</li>
+                    <li onclick="window.location='pages/civilizations/sciences/optics.html'">• البصريات</li>
+                    <li onclick="window.location='pages/civilizations/sciences/geography.html'">• الجغرافيا</li>
+                    <li onclick="window.location='pages/civilizations/sciences/literature.html'">• الأدب</li>
+                    <li onclick="window.location='pages/civilizations/sciences/architecture.html'">• العمارة</li>
+                </ul>
+            </div>
+            
+            <!-- 12. المصادر التاريخية -->
+            <div class="index-item">
+                <h4><i class="fas fa-book"></i> المصادر التاريخية</h4>
+                <ul>
+                    <li onclick="window.location='pages/references/quran.html'">• القرآن الكريم</li>
+                    <li onclick="window.location='pages/references/sahih-bukhari.html'">• صحيح البخاري</li>
+                    <li onclick="window.location='pages/references/sahih-muslim.html'">• صحيح مسلم</li>
+                    <li onclick="window.location='pages/references/tafsir-tabari.html'">• تاريخ الطبري</li>
+                    <li onclick="window.location='pages/references/bidayah-wan-nihayah.html'">• البداية والنهاية</li>
+                    <li onclick="window.location='pages/references/al-kamil-fil-tarikh.html'">• الكامل في التاريخ</li>
+                    <li onclick="window.location='pages/references/muqaddimah-ibn-khaldun.html'">• مقدمة ابن خلدون</li>
+                    <li onclick="window.location='pages/references/siyar-alam-al-nubala.html'">• سير أعلام النبلاء</li>
+                    <li onclick="window.location='pages/references/seerah-ibn-hisham.html'">• السيرة النبوية</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <div class="info-card"><i class="fas fa-landmark"></i><h3>المصادر والمراجع</h3><p>القرآن الكريم • صحيح البخاري • صحيح مسلم • تاريخ الطبري • البداية والنهاية • الكامل في التاريخ • مروج الذهب • سير أعلام النبلاء • مقدمة ابن خلدون</p></div>
+        <div class="info-card"><i class="fas fa-globe"></i><h3>عن الموسوعة</h3><p>ديوان التاريخ الإسلامي هو مشروع موسوعي شامل يهدف إلى توثيق تاريخ العرب والمسلمين من أقدم العصور حتى العصر الحديث. نقدم محتوى موثوقاً للمطالعة والاستكشاف الحر.</p><p><i class="fas fa-calendar-alt"></i> آخر تحديث: 2026 م</p></div>
+        <div class="info-card"><i class="fas fa-envelope"></i><h3>للتواصل والاستفسار</h3><p><i class="fas fa-envelope"></i>mouhas221007@gmail.com</p><p><i class="fas fa-phone"></i> +213 654848437</p><div class="social-links"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-telegram"></i></a><a href="https://wa.me/213654848437"><i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+
+    <!-- Wisdom Section -->
+    <div class="wisdom-area">
+        <i class="fas fa-quote-right" style="font-size: 2rem; color: var(--gold-primary);"></i>
+        <p style="font-size: clamp(1rem, 4vw, 1.4rem); margin: 1rem;">"إن التاريخ الإسلامي ليس مجرد صفحات، بل هو مدرسة للعزة والكرامة والعلم والحضارة التي أضاءت العالم لقرون"</p>
+        <div>— ديوان التاريخ الإسلامي —</div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <span><i class="fas fa-book-open"></i> أكثر من 500 شخصية تاريخية</span>
+            <span><i class="fas fa-fist-raised"></i> أكثر من 100 معركة كبرى</span>
+            <span><i class="fas fa-university"></i> 15 دولة وخلافة إسلامية</span>
+            <span><i class="fas fa-scroll"></i> 50 مرجعاً تاريخياً معتمداً</span>
+        </div>
+    </div>
+</div>
+
+<!-- Include Footer -->
+<div id="footer"></div>
+
+<!-- Modal -->
+<div id="readingModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/modal.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+    function closeModal() {
+        document.getElementById('readingModal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

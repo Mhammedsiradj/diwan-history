@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="لوحة تحكم ديوان التاريخ الإسلامي - إحصائيات وأقسام الموسوعة الشاملة">
+    <title>لوحة التحكم - ديوان التاريخ الإسلامي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lateef:wght@400;500;600&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="assets/js/security.js"></script>
+
+    <style>
+        /* تنسيقات إضافية للوحة التحكم */
+        .dashboard-header {
+            background: linear-gradient(135deg, rgba(30,22,55,0.9), rgba(15,10,30,0.95));
+            border-radius: 48px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card-dash {
+            background: rgba(0,0,0,0.4);
+            border-radius: 28px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(233,196,131,0.2);
+            cursor: pointer;
+        }
+        
+        .stat-card-dash:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            background: rgba(233,196,131,0.08);
+        }
+        
+        .stat-number-large {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--gold-primary);
+        }
+        
+        .stat-label-dash {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .section-grid-dash {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .dashboard-card {
+            background: rgba(0,0,0,0.35);
+            border-radius: 32px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(233,196,131,0.2);
+        }
+        
+        .dashboard-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+        }
+        
+        .dashboard-card h3 {
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-right: 3px solid var(--gold-primary);
+            padding-right: 0.8rem;
+        }
+        
+        .dashboard-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .dashboard-links a {
+            background: rgba(233,196,131,0.12);
+            border: 1px solid rgba(233,196,131,0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .dashboard-links a:hover {
+            background: var(--gold-primary);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+        }
+        
+        .quick-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .action-btn {
+            background: rgba(233,196,131,0.15);
+            border: 1px solid var(--gold-primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--gold-primary);
+            font-family: 'Reem Kufi', sans-serif;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .action-btn:hover {
+            background: var(--gold-primary);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+        
+        .welcome-section {
+            background: rgba(233,196,131,0.08);
+            border-radius: 32px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border-right: 4px solid var(--gold-primary);
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(233,196,131,0.15);
+            border: 1px solid var(--gold-primary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            color: var(--gold-primary);
+            text-decoration: none;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+        
+        .back-button:hover {
+            background: var(--gold-primary);
+            color: var(--dark-bg);
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .section-grid-dash {
+                grid-template-columns: 1fr;
+            }
+            .stat-number-large {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+    <!-- Back Button -->
+    <a href="index.html" class="back-button"><i class="fas fa-arrow-right"></i> العودة إلى الرئيسية</a>
+    
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <i class="fas fa-tachometer-alt" style="font-size: 3rem; color: var(--gold-primary);"></i>
+        <h1>لوحة التحكم</h1>
+        <p>مركز تصفح وإدارة الموسوعة الإسلامية الشاملة</p>
+    </div>
+    
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <i class="fas fa-hand-peace" style="font-size: 2rem; color: var(--gold-primary);"></i>
+        <h2 style="margin: 0.5rem 0;">مرحباً بك في ديوان التاريخ الإسلامي</h2>
+        <p>الموسوعة الشاملة لتاريخ العرب والمسلمين من أقدم العصور حتى العصر الحديث</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">يمكنك من خلال لوحة التحكم هذه تصفح جميع أقسام الموسوعة والإحصائيات العامة</p>
+    </div>
+    
+    <!-- Statistics Cards -->
+    <div class="stats-grid">
+        <div class="stat-card-dash" onclick="location.href='pages/eras/'">
+            <div class="stat-number-large">8</div>
+            <div class="stat-label-dash">العصور التاريخية</div>
+            <i class="fas fa-hourglass-half" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+        <div class="stat-card-dash" onclick="location.href='pages/figures/'">
+            <div class="stat-number-large">150+</div>
+            <div class="stat-label-dash">شخصية تاريخية</div>
+            <i class="fas fa-users" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+        <div class="stat-card-dash" onclick="location.href='pages/battles/'">
+            <div class="stat-number-large">20+</div>
+            <div class="stat-label-dash">معركة وفتح</div>
+            <i class="fas fa-fist-raised" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+        <div class="stat-card-dash" onclick="location.href='pages/civilizations/cities/'">
+            <div class="stat-number-large">8</div>
+            <div class="stat-label-dash">مدن إسلامية</div>
+            <i class="fas fa-city" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+        <div class="stat-card-dash" onclick="location.href='pages/references/'">
+            <div class="stat-number-large">9</div>
+            <div class="stat-label-dash">مصادر تاريخية</div>
+            <i class="fas fa-scroll" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+        <div class="stat-card-dash" onclick="location.href='pages/timeline/'">
+            <div class="stat-number-large">18</div>
+            <div class="stat-label-dash">حدث زمني</div>
+            <i class="fas fa-timeline" style="color: var(--gold-primary); margin-top: 0.5rem; display: block;"></i>
+        </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <a href="index.html" class="action-btn"><i class="fas fa-home"></i> الرئيسية</a>
+        <a href="pages/eras/" class="action-btn"><i class="fas fa-hourglass-half"></i> العصور</a>
+        <a href="pages/figures/" class="action-btn"><i class="fas fa-users"></i> الشخصيات</a>
+        <a href="pages/battles/" class="action-btn"><i class="fas fa-fist-raised"></i> المعارك</a>
+        <a href="pages/civilizations/" class="action-btn"><i class="fas fa-university"></i> الحضارة</a>
+        <a href="pages/references/" class="action-btn"><i class="fas fa-book"></i> المصادر</a>
+        <a href="pages/timeline/" class="action-btn"><i class="fas fa-timeline"></i> التسلسل الزمني</a>
+        <a href="sitemap.html" class="action-btn"><i class="fas fa-sitemap"></i> خريطة الموقع</a>
+    </div>
+    
+    <!-- Main Sections Grid -->
+    <div class="section-grid-dash">
+        <!-- العصور التاريخية -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-hourglass-half"></i> العصور التاريخية</h3>
+            <p>استكشف العصور الإسلامية المختلفة بالتفصيل</p>
+            <div class="dashboard-links">
+                <a href="pages/eras/pre-islamic-era.html">فجر العرب</a>
+                <a href="pages/eras/prophetic-era.html">عصر النبوة</a>
+                <a href="pages/eras/rashidun-era.html">الخلافة الراشدة</a>
+                <a href="pages/eras/umayyad-era.html">الدولة الأموية</a>
+                <a href="pages/eras/abbasid-era.html">الدولة العباسية</a>
+                <a href="pages/eras/ayyubid-era.html">الأيوبيون والمماليك</a>
+                <a href="pages/eras/ottoman-era.html">الدولة العثمانية</a>
+                <a href="pages/eras/modern-era.html">العصر الحديث</a>
+            </div>
+        </div>
+        
+        <!-- الخلفاء الراشدون -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-crown"></i> الخلفاء الراشدون</h3>
+            <p>سيرة الخلفاء الأربعة وخامسهم عمر بن عبدالعزيز</p>
+            <div class="dashboard-links">
+                <a href="pages/figures/caliphs/abu-bakr.html">أبو بكر الصديق</a>
+                <a href="pages/figures/caliphs/umar-ibn-khattab.html">عمر بن الخطاب</a>
+                <a href="pages/figures/caliphs/uthman-bin-affan.html">عثمان بن عفان</a>
+                <a href="pages/figures/caliphs/ali-bin-abi-talib.html">علي بن أبي طالب</a>
+                <a href="pages/figures/caliphs/umar-bin-abdulaziz.html">عمر بن عبدالعزيز</a>
+            </div>
+        </div>
+        
+        <!-- القادة والملوك -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-flag-checkered"></i> القادة والملوك</h3>
+            <p>أبرز القادة العسكريين والملوك عبر التاريخ الإسلامي</p>
+            <div class="dashboard-links">
+                <a href="pages/figures/leaders/saladin-al-ayyubi.html">صلاح الدين الأيوبي</a>
+                <a href="pages/figures/leaders/mehmed-conqueror.html">محمد الفاتح</a>
+                <a href="pages/figures/leaders/baibars.html">الظاهر بيبرس</a>
+                <a href="pages/figures/leaders/tariq-bin-ziyad.html">طارق بن زياد</a>
+                <a href="pages/figures/leaders/suleiman-magnificent.html">سليمان القانوني</a>
+                <a href="pages/figures/leaders/abdulaziz-alsaud.html">الملك عبدالعزيز</a>
+            </div>
+        </div>
+        
+        <!-- الصحابة الكرام -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-users"></i> الصحابة الكرام</h3>
+            <p>أبرز الصحابة الذين عاصروا النبي ﷺ</p>
+            <div class="dashboard-links">
+                <a href="pages/figures/companions/khalid-bin-waleed.html">خالد بن الوليد</a>
+                <a href="pages/figures/companions/saad-bin-abi-waqqas.html">سعد بن أبي وقاص</a>
+                <a href="pages/figures/companions/abu-ubaydah.html">أبو عبيدة بن الجراح</a>
+                <a href="pages/figures/companions/salman-al-farsi.html">سلمان الفارسي</a>
+                <a href="pages/figures/companions/bilal-bin-rabah.html">بلال بن رباح</a>
+                <a href="pages/figures/companions/hamza-bin-abdul-muttalib.html">حمزة بن عبدالمطلب</a>
+            </div>
+        </div>
+        
+        <!-- العلماء والمفكرون -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-flask"></i> العلماء والمفكرون</h3>
+            <p>أعلام الفكر والعلم في الحضارة الإسلامية</p>
+            <div class="dashboard-links">
+                <a href="pages/figures/scholars/ibn-sina.html">ابن سينا</a>
+                <a href="pages/figures/scholars/al-khwarizmi.html">الخوارزمي</a>
+                <a href="pages/figures/scholars/ibn-khaldun.html">ابن خلدون</a>
+                <a href="pages/figures/scholars/al-bukhari.html">البخاري</a>
+                <a href="pages/figures/scholars/ibn-kathir.html">ابن كثير</a>
+                <a href="pages/figures/scholars/ibn-taymiyyah.html">ابن تيمية</a>
+                <a href="pages/figures/scholars/al-ghazali.html">الغزالي</a>
+                <a href="pages/figures/scholars/ibn-rushd.html">ابن رشد</a>
+            </div>
+        </div>
+        
+        <!-- المعارك والفتوحات -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-fist-raised"></i> المعارك والفتوحات</h3>
+            <p>أهم المعارك والفتوحات في التاريخ الإسلامي</p>
+            <div class="dashboard-links">
+                <a href="pages/battles/prophetic-battles/battle-of-badr.html">غزوة بدر</a>
+                <a href="pages/battles/prophetic-battles/battle-of-uhud.html">غزوة أحد</a>
+                <a href="pages/battles/prophetic-battles/battle-of-trench.html">غزوة الخندق</a>
+                <a href="pages/battles/conquests/battle-of-yarmouk.html">معركة اليرموك</a>
+                <a href="pages/battles/conquests/battle-of-qadisiyyah.html">معركة القادسية</a>
+                <a href="pages/battles/conquests/conquest-of-andalus.html">فتح الأندلس</a>
+                <a href="pages/battles/crusades-battles/battle-of-hittin.html">معركة حطين</a>
+                <a href="pages/battles/mongol-battles/battle-of-ain-jalut.html">معركة عين جالوت</a>
+                <a href="pages/battles/ottoman-battles/conquest-of-constantinople.html">فتح القسطنطينية</a>
+            </div>
+        </div>
+        
+        <!-- المدن الإسلامية -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-city"></i> المدن الإسلامية</h3>
+            <p>أشهر المدن في التاريخ الإسلامي</p>
+            <div class="dashboard-links">
+                <a href="pages/civilizations/cities/makkah.html">مكة المكرمة</a>
+                <a href="pages/civilizations/cities/madinah.html">المدينة المنورة</a>
+                <a href="pages/civilizations/cities/baghdad.html">بغداد</a>
+                <a href="pages/civilizations/cities/cairo.html">القاهرة</a>
+                <a href="pages/civilizations/cities/damascus.html">دمشق</a>
+                <a href="pages/civilizations/cities/jerusalem.html">بيت المقدس</a>
+                <a href="pages/civilizations/cities/cordoba.html">قرطبة</a>
+                <a href="pages/civilizations/cities/istanbul.html">إسطنبول</a>
+            </div>
+        </div>
+        
+        <!-- المؤسسات العلمية -->
+        <div class="dashboard-card">
+            <h3><i class="fas fa-university"></i> المؤسسات العلمية</h3>
+            <p>مراكز العلم والحضارة في التاريخ الإسلامي</p>
+            <div class="dashboard-links">
+                <a href="pages/civilizations/institutions/house-of-wisdom.html">بيت الحكمة</a>
+                <a href="pages/civilizations/institutions/al-azhar.html">الجامع الأزهر</a>
+                <a href="pages/civilizations/institutions/nizamiyya.html">المدرسة النظامية</a>
+                <a href="pages/civilizations/institutions/madrasa-al-mustansiriya.html">المدرسة المستنصرية</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Note -->
+    <div style="background: rgba(233,196,131,0.05); border-radius: 24px; padding: 1rem; margin: 1rem 0; text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+        <i class="fas fa-edit"></i> ملاحظة: يمكنك تحديث الأرقام والإحصائيات يدوياً من خلال تعديل ملف <code>dashboard.html</code>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

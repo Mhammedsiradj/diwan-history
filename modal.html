@@ -1,0 +1,149 @@
+<!-- Modal Component -->
+<div id="globalModal" class="global-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <button class="modal-close-btn" id="closeModalBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-footer">
+            <button class="modal-action-btn" id="modalActionBtn">إغلاق</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .global-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(8px);
+    }
+    
+    .modal-container {
+        position: relative;
+        background: linear-gradient(145deg, #130e24, #0a0718);
+        border-radius: 32px;
+        max-width: 600px;
+        width: 90%;
+        max-height: 80vh;
+        overflow: hidden;
+        border: 1px solid var(--gold-primary);
+        animation: modalSlideIn 0.3s ease;
+    }
+    
+    @keyframes modalSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(233,196,131,0.3);
+    }
+    
+    .modal-title {
+        color: var(--gold-primary);
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    
+    .modal-close-btn {
+        background: none;
+        border: none;
+        color: var(--text-muted);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .modal-close-btn:hover {
+        color: var(--gold-primary);
+        transform: rotate(90deg);
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+        max-height: 60vh;
+        overflow-y: auto;
+        color: var(--text-light);
+        line-height: 1.8;
+    }
+    
+    .modal-footer {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgba(233,196,131,0.2);
+        text-align: left;
+    }
+    
+    .modal-action-btn {
+        background: rgba(233,196,131,0.2);
+        border: 1px solid var(--gold-primary);
+        padding: 0.5rem 1.2rem;
+        border-radius: 30px;
+        color: var(--gold-primary);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .modal-action-btn:hover {
+        background: var(--gold-primary);
+        color: var(--dark-bg);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('globalModal');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const actionBtn = document.getElementById('modalActionBtn');
+        const overlay = document.querySelector('.modal-overlay');
+        
+        function closeModal() {
+            if (modal) modal.style.display = 'none';
+        }
+        
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (actionBtn) actionBtn.addEventListener('click', closeModal);
+        if (overlay) overlay.addEventListener('click', closeModal);
+        
+        window.showModal = function(title, content) {
+            const titleEl = document.getElementById('modalTitle');
+            const bodyEl = document.getElementById('modalBody');
+            if (titleEl && bodyEl && modal) {
+                titleEl.innerHTML = title;
+                bodyEl.innerHTML = content;
+                modal.style.display = 'flex';
+            }
+        };
+        
+        window.closeModal = closeModal;
+    });
+</script>

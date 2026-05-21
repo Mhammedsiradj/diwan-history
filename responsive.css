@@ -1,0 +1,264 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .history-master-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .history-master-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 991px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .timeline-epochs {
+        gap: 0.6rem;
+    }
+    
+    .epoch-pill {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .index-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Devices (Tablets & Large Phones) */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .bismillah {
+        font-size: 2rem;
+    }
+    
+    .hero-sub {
+        font-size: 1rem;
+    }
+    
+    .explore-bar {
+        flex-direction: column;
+        border-radius: 30px;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .search-input {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .timeline-epochs {
+        gap: 0.5rem;
+    }
+    
+    .epoch-pill {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    .history-master-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .full-timeline {
+        padding: 1rem;
+        border-radius: 40px 20px 40px 20px;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: 1fr;
+        max-height: 400px;
+    }
+    
+    .figures-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .figure-card {
+        padding: 0.8rem;
+    }
+    
+    .figure-card i {
+        font-size: 1.5rem;
+    }
+    
+    .figure-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .index-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .index-item {
+        padding: 0.8rem;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.2rem;
+    }
+    
+    .wisdom-area {
+        padding: 1.2rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 1.2rem;
+        margin: 0.8rem;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .back-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    footer {
+        padding: 1.2rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.8rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .bismillah {
+        font-size: 1.5rem;
+    }
+    
+    .hero-sub {
+        font-size: 0.9rem;
+    }
+    
+    .timeline-epochs {
+        gap: 0.4rem;
+    }
+    
+    .epoch-pill {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.65rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1rem;
+    }
+    
+    .card-icon {
+        font-size: 1.5rem;
+    }
+    
+    .figures-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links a {
+        font-size: 1.2rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1rem;
+    }
+    
+    .info-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+    
+    .timeline-grid {
+        max-height: 300px;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body::before {
+        display: none;
+    }
+    
+    .explore-bar,
+    .filter-buttons,
+    .back-button,
+    .social-links,
+    .modal {
+        display: none;
+    }
+    
+    .hist-card,
+    .figure-card,
+    .index-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
